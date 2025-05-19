@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <style>
+    :root {
+      --turquoise: #008b8b;;
+      --dark: #0a0a0a;
+      --light: #121212;
+      --text: #e0f7f7;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--turquoise);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid white;
+    }
+
+    nav {
+      background-color: var(--dark);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: var(--text);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .project {
+      background: #1e1e1e;
+      padding: 20px;
+      border: 1px solid var(--turquoise);
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: var(--text);
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    a {
+      color: var(--turquoise);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="mercysphoto.jpg" alt="My Photo">
+    <h1>Mercylyne Jepleting</h1>
+    <p>Web Developer | Engineer | Creator</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate software developer with experience in HTML, CSS, Python and JavaScript. I love building sleek and functional websites that bring ideas to life. I also have expertise in Flow Production Tracking (Formerly Shotgrid) APIs and usage</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Lumi Campus Connect</h3>
+      <p>A students companion that makes life in campus easier and enjoyable.</p>
+    </div>
+    <div class="project">
+      <h3>PestGuard</h3>
+      <p>An AI powered pest detection and management application that helps farmers protect their crops for better yield, hence zero hunger goal achieved in the long run.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:mercylynetuwei@gmail.com">mercylynetuwei@gmail.com</a></p>
+    <div class="contact-icons">
+      <a href="tel:+1234567890" title="Phone"><i class="fas fa-phone"></i></a>
+      <a href="https://github.com/yourusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mercylyne Jepleting. All rights reserved.</p>
+  </footer>
+
+  <script>
+    //JS: Smooth scroll
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
